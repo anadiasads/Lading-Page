@@ -62,7 +62,7 @@ h6{
 .main-content{
     max-width: 120rem;
     margin: 0 auto;
-    padding: var(--gap);
+    padding:  10rem var(--gap);
 }
 .menu h1{
     font-size: 2.3rem;
@@ -132,7 +132,7 @@ a{
     display: grid;
     grid-template-columns: 1fr 1.4fr;
     gap: var(--gap);
-    height: 100vh;
+    min-height: 100vh;
 }
 .intro-text-content, .intro-img{
     display: flex;
@@ -148,7 +148,8 @@ a{
     max-width: 64rem;
     height: 100vh;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    flex-wrap: no wrap;
     justify-content: center ;
     text-align: center;
 }
@@ -156,7 +157,7 @@ p{
     margin-bottom: 3rem;
 }
 .grid-one-content{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -188,5 +189,16 @@ p{
     top: -3rem;
     left: -2rem;
     transform: rotate(5deg);
-
  }
+ .gallery-img{
+     width: 100%;
+     max-width: 36rem;
+     max-height: 36rem;
+     overflow: hidden;
+ }
+ .gallery-img img{
+     transition: all 300ms ease-in-out;
+ }
+ .gallery-img img:hover{
+    transform: translate(-3%,-3%) scale(1.2) rotate(5deg);
+}
